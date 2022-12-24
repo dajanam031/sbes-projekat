@@ -1,0 +1,11 @@
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Publisher.exe.config
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Publisher.exe
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Publisher.pdb
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Contracts.dll
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Contracts.pdb
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.SuggestedBindingRedirects.cache
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.CopyComplete
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.exe
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.pdb

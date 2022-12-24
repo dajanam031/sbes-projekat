@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,9 +46,24 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SreviceHostMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj">
+      <Project>{27116834-09F9-4C05-A969-A97D141EED6C}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Publisher\Publisher.csproj">
+      <Project>{45207242-D2DF-49F3-AA45-C052B3320774}</Project>
+      <Name>Publisher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Subscriber\Subscriber.csproj">
+      <Project>{EF0CA861-E1DC-49B2-85E1-667EE341EEE5}</Project>
+      <Name>Subscriber</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

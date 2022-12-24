@@ -1,0 +1,11 @@
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Subscriber.exe.config
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Subscriber.exe
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Subscriber.pdb
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Contracts.dll
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Contracts.pdb
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.SuggestedBindingRedirects.cache
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.CopyComplete
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.exe
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.pdb

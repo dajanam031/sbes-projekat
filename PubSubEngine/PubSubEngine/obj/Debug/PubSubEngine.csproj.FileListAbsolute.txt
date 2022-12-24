@@ -1,0 +1,17 @@
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\PubSubEngine.exe.config
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\PubSubEngine.exe
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\PubSubEngine.pdb
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\Contracts.dll
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\Publisher.exe
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\Subscriber.exe
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\Contracts.pdb
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\Publisher.pdb
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\Publisher.exe.config
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\Subscriber.pdb
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\bin\Debug\Subscriber.exe.config
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\obj\Debug\PubSubEngine.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\obj\Debug\PubSubEngine.csproj.SuggestedBindingRedirects.cache
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\obj\Debug\PubSubEngine.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\obj\Debug\PubSubEngine.csproj.CopyComplete
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\obj\Debug\PubSubEngine.exe
+C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\PubSubEngine\obj\Debug\PubSubEngine.pdb
