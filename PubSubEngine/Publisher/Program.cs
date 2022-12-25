@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -17,25 +18,40 @@ namespace Publisher
 
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {
-                Console.WriteLine("Konekcija uspostavljena");
-                Console.WriteLine("Tema za vaš tekst : ");
-                Console.WriteLine("1. Sport");
-                Console.WriteLine("2. Muzika");
-                Console.WriteLine("3. Politika");
-                Console.WriteLine("4. Film");
-                Console.WriteLine("Unesite broj teme : ");
-                string brojTeme=Console.ReadLine();
-                int br;
-                if(Int32.TryParse(brojTeme,out br))
+                while (true)
                 {
-                    Console.WriteLine("Unesite tekst : ");
-                    string text = Console.ReadLine();
-                    proxy.Send(brojTeme,text);
+                    Console.WriteLine("Konekcija uspostavljena\n(exit za izlaz iz programa)");
+                    Console.WriteLine("Alarm za koji želite da objavite poruku : ");
+                    Console.WriteLine("Unesite vreme generisanja (h:m:s) : ");
+                    string time = Console.ReadLine();
+                    if (time == "exit")
+                        break;
+                    Console.WriteLine("Unesite datum generisanja (month/day/year) : ");
+                    string date = Console.ReadLine();
+
+                    DateTime dateTime;
+                    if (DateTime.TryParse(date + " " + time, out dateTime))
+                    {
+                        Console.WriteLine(dateTime);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Datum nije dobar probajte opet ");
+
+                    }
+                    Console.WriteLine("Poruka o alarmu : ");
+                    string poruka = Console.ReadLine();
+                    Console.WriteLine("Rizik : (1-100)");
+                    string rizik = Console.ReadLine();
+                    int rizikInt;
+                    if (!(Int32.TryParse(rizik, out rizikInt)))
+                    {
+                        Console.WriteLine("Rizik je broj");
+                    }
+                    Alarm alarm = new Alarm(dateTime, poruka, rizikInt);
+                    proxy.Send(alarm);
                 }
-                else
-                {
-                    Console.WriteLine("Pogrešan broj, probajte ponovo!");
-                }
+               
             }
 
             Console.ReadLine();

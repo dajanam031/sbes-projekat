@@ -17,9 +17,9 @@ namespace Publisher
             factory = this.CreateChannel();
         }
 
-        public void Send(string topic, string text)
+        public void Send(Alarm alarm)
         {
-            factory.Send(topic, text);
+            factory.Send(alarm);
         }
     }
 }

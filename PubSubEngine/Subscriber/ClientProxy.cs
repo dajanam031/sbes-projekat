@@ -17,6 +17,11 @@ namespace Subscriber
             factory = this.CreateChannel();
         }
 
+        public List<Alarm> ForwardAlarm(int min, int max)
+        {
+            return factory.ForwardAlarm(min, max);
+        }
+
         public void Send(string topic)
         {
             factory.Send(topic);

@@ -9,3 +9,13 @@ C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publish
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.CopyComplete
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.exe
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.pdb
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Publisher.exe.config
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Publisher.exe
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Publisher.pdb
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Contracts.dll
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Contracts.pdb
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csprojAssemblyReference.cache
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.CopyComplete
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.exe
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.pdb

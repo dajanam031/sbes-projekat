@@ -9,3 +9,13 @@ C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscr
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.CopyComplete
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.exe
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.pdb
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Subscriber.exe.config
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Subscriber.exe
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Subscriber.pdb
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Contracts.dll
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Contracts.pdb
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csprojAssemblyReference.cache
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.CopyComplete
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.exe
+C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.pdb

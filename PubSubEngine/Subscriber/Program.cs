@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -16,22 +17,27 @@ namespace Subscriber
 
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {
-                Console.WriteLine("Konekcija uspostavljena");
-                Console.WriteLine("Tema za koju se želite prijaviti : ");
-                Console.WriteLine("1. Sport");
-                Console.WriteLine("2. Muzika");
-                Console.WriteLine("3. Politika");
-                Console.WriteLine("4. Film");
-                Console.WriteLine("Unesite broj teme : ");
-                string brojTeme = Console.ReadLine();
-                int br;
-                if (Int32.TryParse(brojTeme, out br))
+                while (true)
                 {
-                    proxy.Send(brojTeme);
-                }
-                else
-                {
-                    Console.WriteLine("Pogrešan broj, probajte ponovo!");
+                    Console.WriteLine("Konekcija uspostavljena\n(exit za izlaz iz programa)");
+                    Console.WriteLine("Opseg rizika alarm za koji želite da prijavite (min-max) : ");
+
+                    string rizik = Console.ReadLine();
+                    if (rizik == "exit")
+                        break;
+                    string rizikMin = rizik.Split('-')[0];
+                    string rizikMax = rizik.Split('-')[1];
+                    int minRizik = Int32.Parse(rizikMin);
+                    int maxRizik = Int32.Parse(rizikMax);
+
+                    List<Alarm> alarms = proxy.ForwardAlarm(minRizik, maxRizik);
+                    foreach (Alarm a in alarms)
+                    {
+                        Console.WriteLine("Alarm : ");
+                        Console.WriteLine("Vreme generisanja : " + a.GeneratingTime);
+                        Console.WriteLine("Poruka o alarmu : " + a.MessegAlarm);
+                        Console.WriteLine("Rizik : " + a.Risk);
+                    }
                 }
             }
 

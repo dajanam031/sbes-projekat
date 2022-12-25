@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Contracts
 {
-    [ServiceContract]
-    public interface IPublish
+     public class AlarmStorage
     {
-        [OperationContract]
-        void Send(Alarm alarm);
+           public static List<Alarm> alarms = new List<Alarm>();
+        
     }
 }

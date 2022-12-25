@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace Contracts
 {
     [DataContract]
     public enum AlarmMessages
@@ -23,11 +24,18 @@ namespace Models
     public class Alarm
     {
         [DataMember]
-        private DateTime GeneratingTime;
+        private DateTime generatingTime;
         [DataMember]
-        private string MessegAlarm;
+        private string messegAlarm;
         [DataMember]
         private int risk;
+
+        public Alarm(DateTime generatingTime, string messegAlarm, int risk)
+        {
+            GeneratingTime = generatingTime;
+            MessegAlarm = messegAlarm;
+            Risk = risk;
+        }
 
         public int Risk
         {
@@ -37,9 +45,12 @@ namespace Models
             }
             set
             {
-                if(value <= 100 && value>=1)
+                if (value <= 100 && value >= 1)
                     risk = value;
             }
         }
+
+        public DateTime GeneratingTime { get => generatingTime; set => generatingTime = value; }
+        public string MessegAlarm { get => messegAlarm; set => messegAlarm = value; }
     }
 }
