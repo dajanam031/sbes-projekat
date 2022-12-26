@@ -19,3 +19,15 @@ C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber
 C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.CopyComplete
 C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.exe
 C:\Users\user\Desktop\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.pdb
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Subscriber.exe.config
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Subscriber.exe
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Subscriber.pdb
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Contracts.dll
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\SecurityManager.dll
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\Contracts.pdb
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\bin\Debug\SecurityManager.pdb
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.AssemblyReference.cache
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.CoreCompileInputs.cache
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.csproj.CopyComplete
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.exe
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Subscriber\obj\Debug\Subscriber.pdb

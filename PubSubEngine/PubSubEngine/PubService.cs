@@ -9,10 +9,15 @@ namespace PubSubEngine
 {
     public class PubService : IPublish
     {
+        public void Send(string topic, string text)
+        {
+            Console.WriteLine("Tema : " + topic);
+            Console.WriteLine("Text : " + text);
+        }
+
         public void Send(Alarm alarm)
         {
             AlarmStorage.alarms.Add(alarm);
-            Console.WriteLine("Alarm : " + alarm.MessegAlarm + " Rizik : " + alarm.Risk);
         }
     }
 }

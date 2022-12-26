@@ -1,7 +1,9 @@
 ﻿using Contracts;
+using SecurityManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +14,18 @@ namespace Subscriber
     {
         static void Main(string[] args)
         {
+            // ocekivani serverski sertifikat
+
+            string serverCertCN = "pubsubserver";
+
+            X509Certificate2 srvCert = CertManager.GetCertificateFromStorage(StoreName.TrustedPeople,
+                StoreLocation.LocalMachine, serverCertCN);
+
             NetTcpBinding binding = new NetTcpBinding();
-            string address = "net.tcp://localhost:5353/SubService";
+            binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
+
+            EndpointAddress address = new EndpointAddress(new Uri("net.tcp://localhost:5353/SubService"),
+                                     new X509CertificateEndpointIdentity(srvCert));
 
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {

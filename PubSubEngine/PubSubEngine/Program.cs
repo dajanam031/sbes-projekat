@@ -4,9 +4,11 @@ using Subscriber;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using SecurityManager;
 
 namespace PubSubEngine
 {
@@ -14,11 +16,13 @@ namespace PubSubEngine
     {
         static void Main(string[] args)
         {
+            string srvCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name);
+
             string addressPub = "net.tcp://localhost:5353/PubService";
-            ServiceHost pubHost = SreviceHostMethod.HostMethod(addressPub, typeof(PubService), typeof(IPublish));
+            ServiceHost pubHost = SreviceHostMethod.HostMethod(addressPub, typeof(PubService), typeof(IPublish), srvCertCN);
 
             string addressSub = "net.tcp://localhost:5353/SubService";
-            ServiceHost subHost = SreviceHostMethod.HostMethod(addressSub, typeof(SubService), typeof(ISubscribe));
+            ServiceHost subHost = SreviceHostMethod.HostMethod(addressSub, typeof(SubService), typeof(ISubscribe), srvCertCN);
             
             try
             {

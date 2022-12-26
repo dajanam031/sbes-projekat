@@ -1,0 +1,6 @@
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\SecurityManager\bin\Debug\SecurityManager.dll
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\SecurityManager\bin\Debug\SecurityManager.pdb
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.csproj.AssemblyReference.cache
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.csproj.CoreCompileInputs.cache
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.dll
+C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.pdb

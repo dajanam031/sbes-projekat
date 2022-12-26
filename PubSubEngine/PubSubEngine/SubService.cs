@@ -15,16 +15,15 @@ namespace PubSubEngine
             foreach (Alarm a in AlarmStorage.alarms)
             {
                 if (a.Risk > min && a.Risk < max)
-                {
                     alarms.Add(a);
-                }
             }
             return alarms;
         }
 
+
         public void Send(string topic)
         {
-            Console.WriteLine("Alarm rizika : " + topic);
+            Console.WriteLine("Tema : " + topic);
         }
     }
 }
