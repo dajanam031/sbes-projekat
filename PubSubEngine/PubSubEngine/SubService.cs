@@ -12,7 +12,7 @@ namespace PubSubEngine
         public List<Alarm> ForwardAlarm(int min, int max)
         {
             List<Alarm> alarms = new List<Alarm>();
-            foreach (Alarm a in AlarmStorage.alarms)
+            foreach (var a in AlarmStorage.alarms)
             {
                 if (a.Risk > min && a.Risk < max)
                     alarms.Add(a);

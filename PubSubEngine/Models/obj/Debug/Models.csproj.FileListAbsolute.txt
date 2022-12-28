@@ -10,3 +10,9 @@ C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Models\obj\
 C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.dll
 C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.pdb
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Models\bin\Debug\Models.dll
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Models\bin\Debug\Models.pdb
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.dll
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.pdb

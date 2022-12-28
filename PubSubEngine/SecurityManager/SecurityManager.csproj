@@ -44,9 +44,16 @@
   <ItemGroup>
     <Compile Include="CertManager.cs" />
     <Compile Include="ClientCertValidator.cs" />
+    <Compile Include="DigitalSignature.cs" />
     <Compile Include="Formatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceCertValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj">
+      <Project>{27116834-09f9-4c05-a969-a97d141eed6c}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

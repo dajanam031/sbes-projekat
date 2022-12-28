@@ -15,3 +15,9 @@ C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Contracts\b
 C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
 C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.dll
 C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.pdb
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Contracts\bin\Debug\Contracts.dll
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Contracts\bin\Debug\Contracts.pdb
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.dll
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.pdb
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.csproj.AssemblyReference.cache

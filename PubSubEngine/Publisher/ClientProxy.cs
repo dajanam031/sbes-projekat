@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Principal;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,13 @@ namespace Publisher
     internal class ClientProxy : ChannelFactory<IPublish>, IPublish, IDisposable
     {
         IPublish factory;
+        private static readonly string signCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name) + "_sign";
 
         public ClientProxy(NetTcpBinding binding, EndpointAddress address) : base(binding, address)
         {
             /// cltCertCN.SubjectName should be set to the client's username. .NET WindowsIdentity class provides information about Windows user running the given process
-            //string cltCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name);
-            string cltCertCN = "publisher";
+            string cltCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name);
+            //string cltCertCN = "publisher";
             this.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust;
             //this.Credentials.ServiceCertificate.Authentication.CustomCertificateValidator = new ClientCertValidator();
             this.Credentials.ServiceCertificate.Authentication.RevocationMode = X509RevocationMode.NoCheck;
@@ -29,9 +31,9 @@ namespace Publisher
             factory = this.CreateChannel();
         }
 
-        public void Send(Alarm alarm)
+        public void Send(Alarm signature)
         {
-            factory.Send(alarm);
+            factory.Send(signature);
         }
     }
 }

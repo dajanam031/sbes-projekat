@@ -15,9 +15,12 @@ namespace PubSubEngine
             Console.WriteLine("Text : " + text);
         }
 
+
         public void Send(Alarm alarm)
         {
             AlarmStorage.alarms.Add(alarm);
         }
+
+        
     }
 }

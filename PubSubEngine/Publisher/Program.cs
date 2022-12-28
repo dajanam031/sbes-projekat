@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Principal;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,12 +19,16 @@ namespace Publisher
             // ocekivani serverski sertifikat
 
             string serverCertCN = "pubsubserver";
+            string signCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name) + "_sign";
 
             NetTcpBinding binding = new NetTcpBinding();
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
 
             X509Certificate2 srvCert = CertManager.GetCertificateFromStorage(StoreName.TrustedPeople,
                 StoreLocation.LocalMachine, serverCertCN);
+
+            X509Certificate2 signCert = CertManager.GetCertificateFromStorage(StoreName.My,
+                StoreLocation.LocalMachine, signCertCN);
 
             EndpointAddress address = new EndpointAddress(new Uri("net.tcp://localhost:5353/PubService"),
                                       new X509CertificateEndpointIdentity(srvCert));
@@ -61,7 +66,17 @@ namespace Publisher
                         Console.WriteLine("Rizik je broj");
                     }
                     Alarm alarm = new Alarm(dateTime, poruka, rizikInt);
-                    proxy.Send(alarm);
+                    try
+                    {
+                        UnicodeEncoding encoding = new UnicodeEncoding();
+                        byte[] data = encoding.GetBytes(alarm.ToString());
+                        byte[] signature = DigitalSignature.Create(data, HashAlgorithm.SHA1, signCert);
+                        proxy.Send(alarm);
+                    } catch(Exception e)
+                    {
+                        throw new Exception(e.Message);
+                    }
+                    
                 }
                
             }

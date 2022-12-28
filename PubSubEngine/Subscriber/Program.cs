@@ -12,6 +12,7 @@ namespace Subscriber
 {
     class Program
     {
+        private static List<Alarm> AllAlarmsForThisSub = new List<Alarm>();
         static void Main(string[] args)
         {
             // ocekivani serverski sertifikat
@@ -29,31 +30,60 @@ namespace Subscriber
 
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {
+                Console.WriteLine("Konekcija uspostavljena\n(exit za izlaz iz programa)");
+                Console.WriteLine("Opseg rizika alarm za koji želite da prijavite (min-max) : ");
+
+
+
+                string rizik = Console.ReadLine();
+
+                string rizikMin = rizik.Split('-')[0];
+                string rizikMax = rizik.Split('-')[1];
+                int minRizik = Int32.Parse(rizikMin);
+                int maxRizik = Int32.Parse(rizikMax);
                 while (true)
                 {
-                    Console.WriteLine("Konekcija uspostavljena\n(exit za izlaz iz programa)");
-                    Console.WriteLine("Opseg rizika alarm za koji želite da prijavite (min-max) : ");
 
-                    string rizik = Console.ReadLine();
-                    if (rizik == "exit")
-                        break;
-                    string rizikMin = rizik.Split('-')[0];
-                    string rizikMax = rizik.Split('-')[1];
-                    int minRizik = Int32.Parse(rizikMin);
-                    int maxRizik = Int32.Parse(rizikMax);
+
 
                     List<Alarm> alarms = proxy.ForwardAlarm(minRizik, maxRizik);
+                    List<Alarm> NewAlarms = new List<Alarm>();
                     foreach (Alarm a in alarms)
                     {
-                        Console.WriteLine("Alarm : ");
-                        Console.WriteLine("Vreme generisanja : " + a.GeneratingTime);
-                        Console.WriteLine("Poruka o alarmu : " + a.MessegAlarm);
-                        Console.WriteLine("Rizik : " + a.Risk);
+                        if (AllAlarmsForThisSub.Count == alarms.Count)
+                        {
+                            NewAlarms.Clear();
+                        }
+                        else if ((AllAlarmsForThisSub.Count == 0) && (alarms.Count > 0))
+                        {
+                            foreach (Alarm al in alarms)
+                            {
+                                AllAlarmsForThisSub.Add(al);
+                                NewAlarms.Add(al);
+                            }
+                        }
+                        else
+                        {
+                            for (int i = AllAlarmsForThisSub.Count - 1; i < alarms.Count; i++)
+                            {
+                                AllAlarmsForThisSub.Add(alarms[i]);
+                                NewAlarms.Add(alarms[i]);
+                            }
+                        }
+                    }
+                    if (NewAlarms.Count > 0)
+                    {
+                        foreach (Alarm a in NewAlarms)
+                        {
+                            Console.WriteLine("Alarm : ");
+                            Console.WriteLine("Vreme generisanja : " + a.GeneratingTime);
+                            Console.WriteLine("Poruka o alarmu : " + a.MessegAlarm);
+                            Console.WriteLine("Rizik : " + a.Risk);
+                        }
+                        NewAlarms.Clear();
                     }
                 }
             }
-
-            Console.ReadLine();
         }
     }
 }

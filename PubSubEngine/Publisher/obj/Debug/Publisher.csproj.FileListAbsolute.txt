@@ -31,3 +31,15 @@ C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Publisher\o
 C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.CopyComplete
 C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.exe
 C:\Users\Dajana\OneDrive\Desktop\projekat\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.pdb
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Publisher.exe.config
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Publisher.exe
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Publisher.pdb
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Contracts.dll
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\bin\Debug\SecurityManager.dll
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\bin\Debug\Contracts.pdb
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\bin\Debug\SecurityManager.pdb
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.AssemblyReference.cache
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.CoreCompileInputs.cache
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.csproj.CopyComplete
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.exe
+C:\Users\Nina\source\repos\sbes\sbes-projekat\PubSubEngine\Publisher\obj\Debug\Publisher.pdb
