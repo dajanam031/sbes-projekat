@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Encrypting;
 using SecurityManager;
 using System;
 using System.Collections.Generic;
@@ -19,25 +20,21 @@ namespace Publisher
             // ocekivani serverski sertifikat
 
             string serverCertCN = "pubsubserver";
-            string signCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name) + "_sign";
 
             NetTcpBinding binding = new NetTcpBinding();
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
 
             X509Certificate2 srvCert = CertManager.GetCertificateFromStorage(StoreName.TrustedPeople,
-                StoreLocation.LocalMachine, serverCertCN);
+            StoreLocation.LocalMachine, serverCertCN);
 
-            X509Certificate2 signCert = CertManager.GetCertificateFromStorage(StoreName.My,
-                StoreLocation.LocalMachine, signCertCN);
-
-            EndpointAddress address = new EndpointAddress(new Uri("net.tcp://localhost:5353/PubService"),
-                                      new X509CertificateEndpointIdentity(srvCert));
+            EndpointAddress address = new EndpointAddress(new Uri("net.tcp://localhost:8000/PubService"), new X509CertificateEndpointIdentity(srvCert));
 
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {
+                Console.WriteLine("Konekcija uspostavljena\n(exit za izlaz iz programa)");
                 while (true)
                 {
-                    Console.WriteLine("Konekcija uspostavljena\n(exit za izlaz iz programa)");
+                    bool vaidniBrojevi = true;
                     Console.WriteLine("Alarm za koji želite da objavite poruku : ");
                     Console.WriteLine("Unesite vreme generisanja (h:m:s) : ");
                     string time = Console.ReadLine();
@@ -53,7 +50,8 @@ namespace Publisher
                     }
                     else
                     {
-                        Console.WriteLine("Datum nije dobar probajte opet ");
+                        Console.WriteLine("Datum nije dobar unesite alarm opet");
+                        vaidniBrojevi = false;
 
                     }
                     Console.WriteLine("Poruka o alarmu : ");
@@ -64,24 +62,35 @@ namespace Publisher
                     if (!(Int32.TryParse(rizik, out rizikInt)))
                     {
                         Console.WriteLine("Rizik je broj");
+                        vaidniBrojevi = false;
+
                     }
-                    Alarm alarm = new Alarm(dateTime, poruka, rizikInt);
-                    try
+                    if (vaidniBrojevi)
                     {
-                        UnicodeEncoding encoding = new UnicodeEncoding();
-                        byte[] data = encoding.GetBytes(alarm.ToString());
-                        byte[] signature = DigitalSignature.Create(data, HashAlgorithm.SHA1, signCert);
-                        proxy.Send(alarm);
-                    } catch(Exception e)
-                    {
-                        throw new Exception(e.Message);
+                        Alarm alarm = new Alarm(dateTime, poruka, rizikInt);
+                        string key=SecretKey.LoadKey("keyFile.txt");
+                        byte[] message= AESInECB.EncryptAlarm(alarm, key);
+                        string signCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name)+"_sign";
+
+                        X509Certificate2 certificateSign = CertManager.GetCertificateFromStorage(StoreName.My,
+                            StoreLocation.LocalMachine, signCertCN);
+                        byte[] signature = DigitalSignature.Create(message, HashAlgorithm.SHA1, certificateSign);
+                        
+
+                        try
+                        {
+                            proxy.Send(message,signature);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("program.cs : " + ex.Message);
+                            Console.ReadLine();
+                        }
                     }
-                    
                 }
                
             }
 
-            Console.ReadLine();
         }
        
     }

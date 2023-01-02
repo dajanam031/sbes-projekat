@@ -20,7 +20,7 @@ namespace Subscriber
             /// cltCertCN.SubjectName should be set to the client's username. .NET WindowsIdentity class provides information about Windows user running the given process
 			string cltCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name);
 
-            this.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = System.ServiceModel.Security.X509CertificateValidationMode.Custom;
+            this.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust;
             this.Credentials.ServiceCertificate.Authentication.CustomCertificateValidator = new ClientCertValidator();
             this.Credentials.ServiceCertificate.Authentication.RevocationMode = X509RevocationMode.NoCheck;
 
@@ -28,14 +28,32 @@ namespace Subscriber
             factory = this.CreateChannel();
         }
 
-        public List<Alarm> ForwardAlarm(int min, int max)
-        {
-            return factory.ForwardAlarm(min, max);
-        }
+        
 
         public void Send(string topic)
         {
+
             factory.Send(topic);
+        }
+
+        public Dictionary<byte[], byte[]> ForwardAlarm(int min, int max)
+        {
+            string key = SecretKey.LoadKey("keyFile.txt");
+            string clienName = "publisher";
+            string clientNameSign = clienName + "_sign";
+            X509Certificate2 certificate = CertManager.GetCertificateFromStorage(StoreName.TrustedPeople,
+                StoreLocation.LocalMachine, clientNameSign);
+            Dictionary<byte[], byte[]> alarms = new Dictionary<byte[], byte[]>();
+            Dictionary<byte[], byte[]> result = factory.ForwardAlarm(min, max);
+            
+            foreach (KeyValuePair<byte[], byte[]> keyValuePair in result)
+            {
+                if (DigitalSignature.Verify(keyValuePair.Value, HashAlgorithm.SHA1, keyValuePair.Key, certificate))
+                {
+                    alarms.Add(keyValuePair.Key, keyValuePair.Value);
+                }
+            }
+            return alarms;
         }
     }
 }

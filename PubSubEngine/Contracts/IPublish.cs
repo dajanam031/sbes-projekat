@@ -11,6 +11,6 @@ namespace Contracts
     public interface IPublish
     {
         [OperationContract]
-        void Send(Alarm alarm);
+        void Send(byte[] alarm, byte[] sign);
     }
 }

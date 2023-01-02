@@ -20,7 +20,7 @@ namespace SecurityManager
             {
                 throw new Exception("Valid certificate was not found.");
             }
-            UnicodeEncoding encoding = new UnicodeEncoding();
+            //UnicodeEncoding encoding = new UnicodeEncoding();
             //byte[] data = encoding.GetBytes(message);
             byte[] hash = null;
 

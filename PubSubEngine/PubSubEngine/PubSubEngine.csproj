@@ -59,6 +59,10 @@
       <Project>{27116834-09F9-4C05-A969-A97D141EED6C}</Project>
       <Name>Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Encrypting\Encrypting.csproj">
+      <Project>{27199af5-c209-4cca-8553-43dbe9fbcc2c}</Project>
+      <Name>Encrypting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Publisher\Publisher.csproj">
       <Project>{45207242-D2DF-49F3-AA45-C052B3320774}</Project>
       <Name>Publisher</Name>

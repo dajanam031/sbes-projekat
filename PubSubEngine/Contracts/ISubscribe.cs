@@ -13,6 +13,6 @@ namespace Contracts
         [OperationContract]
         void Send(string topic);
         [OperationContract]
-        List<Alarm> ForwardAlarm(int min, int max);
+        Dictionary<byte[], byte[]> ForwardAlarm(int min, int max);
     }
 }

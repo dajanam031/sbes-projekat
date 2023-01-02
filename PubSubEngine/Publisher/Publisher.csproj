@@ -57,6 +57,10 @@
       <Project>{27116834-09F9-4C05-A969-A97D141EED6C}</Project>
       <Name>Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Encrypting\Encrypting.csproj">
+      <Project>{27199AF5-C209-4CCA-8553-43DBE9FBCC2C}</Project>
+      <Name>Encrypting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SecurityManager\SecurityManager.csproj">
       <Project>{d78afdbb-254a-40e2-9a39-aeb2f7932b21}</Project>
       <Name>SecurityManager</Name>
