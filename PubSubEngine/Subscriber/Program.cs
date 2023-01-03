@@ -3,6 +3,7 @@ using Encrypting;
 using SecurityManager;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.ServiceModel;
@@ -82,7 +83,17 @@ namespace Subscriber
                                 Console.WriteLine("Vreme generisanja : " + a.GeneratingTime);
                                 Console.WriteLine("Poruka o alarmu : " + a.MessegAlarm);
                                 Console.WriteLine("Rizik : " + a.Risk);
+
+                                using (StreamWriter writer = new StreamWriter("alarm.txt", true))
+                                {
+                                    string text = "";
+                                    text+= "Vreme generisanja: " + a.GeneratingTime + " Poruka o alarmu: " + a.MessegAlarm + " Rizik: " + a.Risk;
+                                    writer.WriteLine(text);
+
+                                }
                             }
+
+                           
                             NewAlarms.Clear();
                         }
                     }

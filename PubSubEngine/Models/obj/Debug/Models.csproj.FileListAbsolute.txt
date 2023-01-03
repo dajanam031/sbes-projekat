@@ -16,9 +16,15 @@ C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.csp
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.dll
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.pdb
+C:\sbes-projekat22\PubSubEngine\Models\bin\Debug\Models.dll
+C:\sbes-projekat22\PubSubEngine\Models\bin\Debug\Models.pdb
+C:\sbes-projekat22\PubSubEngine\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\sbes-projekat22\PubSubEngine\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\sbes-projekat22\PubSubEngine\Models\obj\Debug\Models.dll
+C:\sbes-projekat22\PubSubEngine\Models\obj\Debug\Models.pdb
 C:\sbes-projekat\PubSubEngine\Models\bin\Debug\Models.dll
 C:\sbes-projekat\PubSubEngine\Models\bin\Debug\Models.pdb
-C:\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+C:\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.csprojAssemblyReference.cache
 C:\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.dll
 C:\sbes-projekat\PubSubEngine\Models\obj\Debug\Models.pdb

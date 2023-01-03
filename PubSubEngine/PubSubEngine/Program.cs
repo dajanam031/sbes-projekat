@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SecurityManager;
 using Encrypting;
+using System.ServiceModel.Description;
 
 namespace PubSubEngine
 {
@@ -26,6 +27,13 @@ namespace PubSubEngine
             string key = SecretKey.GenerateKey();
             SecretKey.StoreKey(key, "keyFile.txt");
 
+           
+            ServiceSecurityAuditBehavior newAudit = new ServiceSecurityAuditBehavior();
+            newAudit.AuditLogLocation = AuditLogLocation.Application;
+            newAudit.ServiceAuthorizationAuditLevel = AuditLevel.Success;
+
+            subHost.Description.Behaviors.Remove<ServiceSecurityAuditBehavior>();
+            subHost.Description.Behaviors.Add(newAudit);
 
             try
             {

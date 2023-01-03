@@ -10,9 +10,14 @@ C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\S
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.csproj.CoreCompileInputs.cache
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.dll
 C:\Users\Korisnik\Desktop\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.pdb
+C:\sbes-projekat22\PubSubEngine\SecurityManager\bin\Debug\SecurityManager.dll
+C:\sbes-projekat22\PubSubEngine\SecurityManager\bin\Debug\SecurityManager.pdb
+C:\sbes-projekat22\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.csprojAssemblyReference.cache
+C:\sbes-projekat22\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.csproj.CoreCompileInputs.cache
+C:\sbes-projekat22\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.dll
+C:\sbes-projekat22\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.pdb
 C:\sbes-projekat\PubSubEngine\SecurityManager\bin\Debug\SecurityManager.dll
 C:\sbes-projekat\PubSubEngine\SecurityManager\bin\Debug\SecurityManager.pdb
-C:\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.csproj.AssemblyReference.cache
 C:\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.csproj.CoreCompileInputs.cache
 C:\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.dll
 C:\sbes-projekat\PubSubEngine\SecurityManager\obj\Debug\SecurityManager.pdb

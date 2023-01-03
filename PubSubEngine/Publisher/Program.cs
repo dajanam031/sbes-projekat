@@ -8,6 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Principal;
 using System.ServiceModel;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Publisher
@@ -32,6 +33,18 @@ namespace Publisher
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {
                 Console.WriteLine("Konekcija uspostavljena\n(exit za izlaz iz programa)");
+
+                Console.WriteLine("Definisite interval za objavljivanje (integer, milliseconds): ");
+                string ulaz = Console.ReadLine();
+                int interval;
+                while (!Int32.TryParse(ulaz, out interval))
+                {
+                    Console.WriteLine("Interval mora biti broj! Pokusajte ponovo: ");
+                    ulaz = Console.ReadLine();
+                }
+
+                proxy.PublishingInterval = interval;
+
                 while (true)
                 {
                     bool vaidniBrojevi = true;
@@ -86,6 +99,8 @@ namespace Publisher
                             Console.WriteLine("program.cs : " + ex.Message);
                             Console.ReadLine();
                         }
+
+                        Thread.Sleep(proxy.PublishingInterval);
                     }
                 }
                
