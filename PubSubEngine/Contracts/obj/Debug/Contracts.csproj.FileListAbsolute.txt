@@ -23,7 +23,7 @@ C:\sbes-projekat22\PubSubEngine\Contracts\obj\Debug\Contracts.dll
 C:\sbes-projekat22\PubSubEngine\Contracts\obj\Debug\Contracts.pdb
 C:\sbes-projekat\PubSubEngine\Contracts\bin\Debug\Contracts.dll
 C:\sbes-projekat\PubSubEngine\Contracts\bin\Debug\Contracts.pdb
-C:\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.csprojAssemblyReference.cache
+C:\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.csproj.AssemblyReference.cache
 C:\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
 C:\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.dll
 C:\sbes-projekat\PubSubEngine\Contracts\obj\Debug\Contracts.pdb

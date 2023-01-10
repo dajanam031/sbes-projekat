@@ -53,7 +53,7 @@ namespace Publisher
                     string time = Console.ReadLine();
                     if (time == "exit")
                         break;
-                    Console.WriteLine("Unesite datum generisanja (month/day/year) : ");
+                    Console.WriteLine("Unesite datum generisanja (day/month/year) : ");
                     string date = Console.ReadLine();
 
                     DateTime dateTime;

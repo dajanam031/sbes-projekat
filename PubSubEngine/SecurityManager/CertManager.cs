@@ -10,6 +10,25 @@ namespace SecurityManager
 {
 	public class CertManager
 	{
+		public static X509Certificate2 GetSignatureCertificate()
+		{
+
+			//string clientName = Formatter.ParseName(ServiceSecurityContext.Current.PrimaryIdentity.Name); this would give name of the service
+			//but the service passess on Publishers data therefore i'll hardcode Publishers name
+			string clientNameSign = "publisher_sign";
+
+			X509Certificate2 certificate = null; //the method wont ever return null due to catch bellow
+			try
+			{
+				certificate = CertManager.GetCertificateFromStorage(StoreName.TrustedPeople, StoreLocation.LocalMachine, clientNameSign);
+				return certificate;
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e);
+				throw new Exception(e.Message);
+			}
+		}
 		public static X509Certificate2 GetCertificateFromStorage(StoreName storeName, StoreLocation storeLocation, string subjectName)
 		{
 			X509Store store = new X509Store(storeName, storeLocation);
