@@ -10,7 +10,6 @@ namespace SecurityManager
 {
 	public class SecretKey
 	{
-		// Generate a secret key
 		public static string GenerateKey()
 		{
 			SymmetricAlgorithm symmAlgorithm = null;
@@ -20,7 +19,6 @@ namespace SecurityManager
 			return ASCIIEncoding.ASCII.GetString(symmAlgorithm.Key);
 		}
 
-		// Store secret key in a file
 		public static void StoreKey(string secretKey, string outFile)
 		{
 			FileStream fOutput = new FileStream(outFile, FileMode.OpenOrCreate, FileAccess.Write);
@@ -41,7 +39,6 @@ namespace SecurityManager
 		}
 
 
-		// Load secret key from a file
 		public static string LoadKey(string inFile)
 		{
 			FileStream fInput = new FileStream(inFile, FileMode.Open, FileAccess.Read);

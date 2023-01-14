@@ -17,7 +17,6 @@ namespace Subscriber
 
         public ClientProxy(NetTcpBinding binding, EndpointAddress address) : base(binding, address)
         {
-            /// cltCertCN.SubjectName should be set to the client's username. .NET WindowsIdentity class provides information about Windows user running the given process
 			string cltCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name);
 
             this.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust;
@@ -30,11 +29,6 @@ namespace Subscriber
 
         
 
-        public void Send(string topic)
-        {
-
-            factory.Send(topic);
-        }
 
         public Dictionary<byte[], byte[]> ForwardAlarm(int min, int max)
         {

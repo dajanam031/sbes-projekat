@@ -28,13 +28,11 @@ namespace SecurityManager
                 }
                 else
                 {
-                    // Create the event source to make next try successful.
                     EventLog.CreateEventSource("MySource", "MyLog");
                     Console.WriteLine("napravljeno");
                 }
                 customLog = new EventLog(LogName,
                     Environment.MachineName, SourceName);
-                customLog.WriteEntry("This is working", EventLogEntryType.Information);
             }
             catch (Exception e)
             {
@@ -49,7 +47,7 @@ namespace SecurityManager
             if (customLog != null)
             {
 				string str = AuditEvent.WriteAlarm;
-				string[] args = { Timestamp.ToString(), database, id, signature, publicKey.GetRSAPublicKey().ToString() };
+				string[] args = { Timestamp.ToString(), database, id, signature, publicKey.GetPublicKeyString() };
 				string message = String.Format(str, args);
 
 				customLog.WriteEntry(message);

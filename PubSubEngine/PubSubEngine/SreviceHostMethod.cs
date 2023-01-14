@@ -22,14 +22,11 @@ namespace PubSubEngine
             ServiceHost host = new ServiceHost(serviceType);
             host.AddServiceEndpoint(contractType, binding, address);
 
-            ///Custom validation mode enables creation of a custom validator - CustomCertificateValidator
 			host.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.ChainTrust;
             host.Credentials.ClientCertificate.Authentication.CustomCertificateValidator = new ServiceCertValidator();
 
-            ///If CA doesn't have a CRL associated, WCF blocks every client because it cannot be validated
             host.Credentials.ClientCertificate.Authentication.RevocationMode = X509RevocationMode.NoCheck;
 
-            ///Set appropriate service's certificate on the host. Use CertManager class to obtain the certificate based on the "srvCertCN"
             host.Credentials.ServiceCertificate.Certificate = CertManager.GetCertificateFromStorage(StoreName.My, StoreLocation.LocalMachine,srvCertCN);
             
             return host;

@@ -11,8 +11,6 @@ namespace Contracts
     public interface ISubscribe
     {
         [OperationContract]
-        void Send(string topic);
-        [OperationContract]
         Dictionary<byte[], byte[]> ForwardAlarm(int min, int max);
     }
 }

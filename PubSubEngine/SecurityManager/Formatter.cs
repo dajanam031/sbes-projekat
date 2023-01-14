@@ -14,13 +14,11 @@ namespace SecurityManager
 
 			if (winLogonName.Contains("@"))
 			{
-				///UPN format
 				parts = winLogonName.Split('@');
 				return parts[0];
 			}
 			else if (winLogonName.Contains("\\"))
 			{
-				/// SPN format
 				parts = winLogonName.Split('\\');
 				return parts[1];
 			}

@@ -18,7 +18,6 @@ namespace Publisher
 
         static void Main(string[] args)
         {
-            // ocekivani serverski sertifikat
 
             string serverCertCN = "pubsubserver";
 

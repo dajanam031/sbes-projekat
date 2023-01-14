@@ -8,17 +8,7 @@ using System.Threading.Tasks;
 
 namespace Contracts
 {
-    [DataContract]
-    public enum AlarmMessages
-    {
-        [EnumMember]
-        Low,
-        [EnumMember]
-        Standard,
-        [EnumMember]
-        High
-
-    }
+    
     [DataContract]
     [Serializable]
     public class Alarm

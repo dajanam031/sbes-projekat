@@ -13,15 +13,12 @@ namespace SecurityManager
     {
         public static byte[] Create(byte[] data, HashAlgorithm hashAlgorithm, X509Certificate2 certificate)
         {
-            /// Looks for the certificate's private key to sign a message
             RSACryptoServiceProvider csp = (RSACryptoServiceProvider)certificate.PrivateKey;
 
             if (csp == null)
             {
                 throw new Exception("Valid certificate was not found.");
             }
-            //UnicodeEncoding encoding = new UnicodeEncoding();
-            //byte[] data = encoding.GetBytes(message);
             byte[] hash = null;
 
             if (hashAlgorithm.Equals(HashAlgorithm.SHA1))
@@ -34,7 +31,6 @@ namespace SecurityManager
                 SHA256Managed sha256 = new SHA256Managed();
                 hash = sha256.ComputeHash(data);
             }
-            /// Use RSACryptoServiceProvider support to create a signature using a previously created hash value
             byte[] signature = csp.SignHash(hash, CryptoConfig.MapNameToOID(hashAlgorithm.ToString()));
             return signature;
         }
@@ -42,11 +38,9 @@ namespace SecurityManager
 
         public static bool Verify(byte[] data, HashAlgorithm hashAlgorithm, byte[] signature, X509Certificate2 certificate)
         {
-            /// Looks for the certificate's public key to verify a message
             RSACryptoServiceProvider csp = (RSACryptoServiceProvider)certificate.PublicKey.Key;
 
             UnicodeEncoding encoding = new UnicodeEncoding();
-            //byte[] data = encoding.GetBytes(message);
             byte[] hash = null;
 
             if (hashAlgorithm.Equals(HashAlgorithm.SHA1))
@@ -60,7 +54,6 @@ namespace SecurityManager
                 hash = sha256.ComputeHash(data);
             }
 
-            /// Use RSACryptoServiceProvider support to compare two - hash value from signature and newly created hash value
             return csp.VerifyHash(hash, CryptoConfig.MapNameToOID(hashAlgorithm.ToString()), signature);
         }
     }

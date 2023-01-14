@@ -69,60 +69,7 @@ namespace Encrypting
             return decryptedAlarm;
         }
 
-        // Integer encryption
-        public static byte[] EncriptInteger(int numToEncrypt, string secretKey)
-        {
-            byte[] numToEncryptInByteArr = BitConverter.GetBytes(numToEncrypt);
-            byte[] encryptedNum = null;
-
-            AesCryptoServiceProvider aesCryptoProvider = new AesCryptoServiceProvider
-            {
-                Key = ASCIIEncoding.ASCII.GetBytes(secretKey),
-                Mode = CipherMode.ECB,
-                Padding = PaddingMode.PKCS7
-            };
-
-            ICryptoTransform encryptTransform = aesCryptoProvider.CreateEncryptor();
-
-            using (MemoryStream memoryStream = new MemoryStream())
-            {
-                using (CryptoStream cryptoStream = new CryptoStream(memoryStream, encryptTransform, CryptoStreamMode.Write))
-                {
-                    cryptoStream.Write(numToEncryptInByteArr, 0, numToEncryptInByteArr.Length);
-                    cryptoStream.FlushFinalBlock();
-                    encryptedNum = memoryStream.ToArray();
-                }
-            }
-
-            return encryptedNum;
-        }
-
-        // Integer Decryption
-        public static int DecryptInteger(byte[] numToDecryptInByteArr, string secretKey)
-        {
-            byte[] decryptedNumInByteArr = null;
-            int decryptedNum = -1;
-
-            AesCryptoServiceProvider aesCryptoServiceProvider = new AesCryptoServiceProvider
-            {
-                Key = ASCIIEncoding.ASCII.GetBytes(secretKey),
-                Mode = CipherMode.ECB,
-                Padding = PaddingMode.None
-            };
-
-            ICryptoTransform decryptTransform = aesCryptoServiceProvider.CreateDecryptor();
-
-            using (MemoryStream memoryStream = new MemoryStream(numToDecryptInByteArr))
-            {
-                using (CryptoStream cryptoStream = new CryptoStream(memoryStream, decryptTransform, CryptoStreamMode.Read))
-                {
-                    decryptedNumInByteArr = new byte[numToDecryptInByteArr.Length];
-                    cryptoStream.Read(decryptedNumInByteArr, 0, decryptedNumInByteArr.Length);
-                }
-            }
-
-            return decryptedNum = BitConverter.ToInt32(decryptedNumInByteArr, 0);
-        }
+       
 
         // Convert an object to a byte array
         public static byte[] ObjectToByteArray(Object obj)

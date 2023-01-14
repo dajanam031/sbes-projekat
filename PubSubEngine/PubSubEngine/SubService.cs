@@ -14,10 +14,6 @@ namespace PubSubEngine
     public class SubService : ISubscribe
     {
        
-        public void Send(string topic)
-        {
-            Console.WriteLine("Tema : " + topic);
-        }
 
         Dictionary<byte[], byte[]> ISubscribe.ForwardAlarm(int min, int max)
         {

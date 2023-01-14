@@ -13,11 +13,6 @@ namespace PubSubEngine
 {
     public class PubService : IPublish
     {
-        public void Send(string topic, string text)
-        {
-            Console.WriteLine("Tema : " + topic);
-            Console.WriteLine("Text : " + text);
-        }
 
         public void Send(byte[] alarm,byte[] sign)
         {

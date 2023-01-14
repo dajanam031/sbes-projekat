@@ -13,11 +13,9 @@ namespace SecurityManager
 		public static X509Certificate2 GetSignatureCertificate()
 		{
 
-			//string clientName = Formatter.ParseName(ServiceSecurityContext.Current.PrimaryIdentity.Name); this would give name of the service
-			//but the service passess on Publishers data therefore i'll hardcode Publishers name
 			string clientNameSign = "publisher_sign";
 
-			X509Certificate2 certificate = null; //the method wont ever return null due to catch bellow
+			X509Certificate2 certificate = null; 
 			try
 			{
 				certificate = CertManager.GetCertificateFromStorage(StoreName.TrustedPeople, StoreLocation.LocalMachine, clientNameSign);
@@ -35,7 +33,6 @@ namespace SecurityManager
 			store.Open(OpenFlags.ReadOnly);
 			X509Certificate2Collection certCollection = store.Certificates.Find(X509FindType.FindBySubjectName, subjectName, true);
 
-			/// Check whether the subjectName of the certificate is exactly the same as the given "subjectName"
 			foreach (X509Certificate2 c in certCollection)
 			{
 				if (c.SubjectName.Name.Equals(string.Format("CN={0}", subjectName)))

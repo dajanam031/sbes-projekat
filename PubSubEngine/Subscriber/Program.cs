@@ -18,7 +18,6 @@ namespace Subscriber
         private static List<Alarm> AllAlarmsForThisSub = new List<Alarm>();
         static void Main(string[] args)
         {
-            // ocekivani serverski sertifikat
 
             string serverCertCN = "pubsubserver";
 
@@ -106,7 +105,6 @@ namespace Subscriber
                                 }
                                 try
                                 {
-                                    //{ Timestamp.ToString(), database, id, signature, publicKey };
                                     string id= Guid.NewGuid().ToString();
                                     string sign="";
                                     foreach (byte b in a.Key)
